@@ -56,6 +56,11 @@ namespace Лаб1
             decimal dec = 300.5M;
             Console.WriteLine("Переменная dec- {0} относится к типу: {1}", dec,  dec.GetType());
 
+            dynamic dyn = "FF";
+            Console.WriteLine("Переменная dyn- {0} относится к типу: {1}", dyn, dyn.GetType());
+            dyn = 407;
+            Console.WriteLine("Переменная dyn- {0} относится к типу: {1}", dyn, dyn.GetType());
+
             string str = "Hello!";
             Console.WriteLine("Переменная str- {0} относится к типу: {1}", str , str.GetType());
 
@@ -214,7 +219,7 @@ namespace Лаб1
             {
                 Console.WriteLine(x);
             }
-            /*
+            
             Console.WriteLine("Какую строку решите поменять (1-3)?");
             int numberOfString = Convert.ToInt32(Console.ReadLine())-1;
             Console.WriteLine("C какой позиции?");
@@ -252,7 +257,7 @@ namespace Лаб1
             Console.WriteLine("Переменная относится к типу: {0}", localP.GetType());
             var st = "Hsadfafdd";
             Console.WriteLine("Переменная относится к типу: {0}", st.GetType());
-            */
+            
             //----------------------------------Кортежи------------------------
             (int kurs, string name , char group , string surname , ulong age) cortage = (2, "Vitaliy" , 'f' , "Filippov" , 2000);
             (int kurs, string name, char group, string surname, ulong age) cortage1 = (2, "Evgeniy", 'f', "Fando", 1999);
