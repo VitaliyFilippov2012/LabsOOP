@@ -36,8 +36,8 @@ namespace lab2
             Console.WriteLine($"Выручка: {proceeds}\nОбщая сумма: {priceAmount}");
             Console.WriteLine(milk.Equals(fish));
             Console.WriteLine(milk.GetHashCode());
-            var yogurt = new Product(34, "Lask", 2545644232, 1.99f, "Lepel", 1210);
-            yogurt.ToString();
+            var yogurt = new {id=34, name = "Lask", upc =2545644232, price =1.99f, producer = "Lepel", amount = 1210 };
+            Console.WriteLine(yogurt.ToString());
 
 
             //задания

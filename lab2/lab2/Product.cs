@@ -17,8 +17,6 @@ namespace lab2
 
     }
 
-
-
     public partial class Product  //Класс продукты
     {
         readonly int id;
