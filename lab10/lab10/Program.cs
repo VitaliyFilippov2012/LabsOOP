@@ -54,9 +54,9 @@ namespace lab10
             SortedList<float, float> sortedList = new SortedList<float, float>()
             {
                 [1.0f] = 1.3f,
-                [3.0f] = 2.8f,
                 [9.0f] = 9.4f,
                 [5.0f] = 5.3f,
+                [2.0f] = 2.8f,
                 [11.0f] = 11.1f,
                 [13.0f] = 13.8f
 
@@ -95,7 +95,7 @@ namespace lab10
                 Console.WriteLine(item);
             }
             Console.WriteLine($"2. f {new String('-', 15)}");
-            Console.WriteLine($"Содержит в коллекции элемент '2.8' в позиции:{IndexOf(stack, 2.8f)}");
+            Console.WriteLine($"Содержит в коллекции элемент '2.8' в позиции:{IndexOf(stack, 13.8f)}");
             Console.WriteLine($"3. a {new String('-', 15)}");
             SortedList<float, Rectangle> sortedList2 = new SortedList<float, Rectangle>()
             {
@@ -132,10 +132,11 @@ namespace lab10
                 stack2.Push(item);
             }
             Console.WriteLine($"3. e {new String('-', 15)}");
-            foreach (var item in sortedList2.Values)
+            foreach (var item in stack2)
             {
                 Console.WriteLine(item);
             }
+            
             Console.WriteLine($"3. f {new String('-', 15)}");
             Console.WriteLine($"Элемент Rectangle находится в коллекции:{IndexOf(stack2, new Rectangle("Шестиугольник"))}");
             var observCollection = new ObservableCollection<Figure>();
@@ -150,13 +151,17 @@ namespace lab10
             int pos = 0;
             if (!stack.Contains(number))
             {
-                return 0;
+                return 11;
             }
             for (int i = 0; i < stack.Count; ++i)
             {
                 if (stack.ElementAt(i) == number)
-                    pos = i++;
-                break;
+                {
+                 pos = i++;
+                 break;
+                }
+                    
+                
             }
             return pos;
         }
