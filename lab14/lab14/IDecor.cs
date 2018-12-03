@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab11
+namespace lab14
 {
-    class NewType
+    interface IDecor
     {
+        string NameDec { get; set; }
+        string NameWin { get; set; }
     }
 }
